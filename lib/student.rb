@@ -60,7 +60,7 @@ class Student
       WHERE name = ?
     SQL
     DB[:conn].execute(sql, name)
-    
+    # then create ruby instance
   end
 
 end
