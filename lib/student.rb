@@ -40,4 +40,8 @@ class Student
     end
   end
 
+  def create
+    
+  end
+
 end
