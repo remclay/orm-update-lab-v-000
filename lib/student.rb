@@ -60,7 +60,8 @@ class Student
       WHERE name = ?
     SQL
     row = DB[:conn].execute(sql, name)
-    Student.new(row[1], row[2], row[0])
+    self.new_from_db(row)
+    #Student.new(row[1], row[2], row[0])
   end
 
   def update
