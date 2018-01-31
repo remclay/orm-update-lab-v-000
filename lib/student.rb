@@ -59,7 +59,7 @@ class Student
       FROM students
       WHERE name = ?
     SQL
-    row = DB[:conn].execute(sql, name)
+    row = DB[:conn].execute(sql, name)[0]
     self.new_from_db(row)
     #Student.new(row[1], row[2], row[0])
   end
