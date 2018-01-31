@@ -59,7 +59,8 @@ class Student
       FROM students
       WHERE name = ?
     SQL
-    DB[:conn].execute(sql, name)
+    row = DB[:conn].execute(sql, name)
+    Student.new(row[1], row[2], row[3])
     # then create ruby instance
   end
 
