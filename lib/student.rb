@@ -59,7 +59,7 @@ class Student
       FROM students
       WHERE name = ?
     SQL
-    DB[:conn].execute(sql, name)[0][0]
+    DB[:conn].execute(sql, name)[0]
   end
 
 end
