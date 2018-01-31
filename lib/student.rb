@@ -42,7 +42,7 @@ class Student
 
   def self.create(name, grade)
     sql = <<-SQL
-      INSERT INTO student (name, grade)
+      INSERT INTO students (name, grade)
       VALUES (?, ?)
       SQL
     DB[:conn].execute(sql, name, grade)
