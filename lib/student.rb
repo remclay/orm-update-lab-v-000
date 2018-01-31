@@ -61,7 +61,6 @@ class Student
     SQL
     row = DB[:conn].execute(sql, name)
     Student.new(row[1], row[2], row[3])
-    # then create ruby instance
   end
 
   def update
