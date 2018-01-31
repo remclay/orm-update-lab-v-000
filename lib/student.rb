@@ -63,4 +63,10 @@ class Student
     # then create ruby instance
   end
 
+  def update
+    sql = <<-SQL
+      UPDATE students SET name = ?, grade = ? WHERE id = ?
+      SQL
+  end
+
 end
